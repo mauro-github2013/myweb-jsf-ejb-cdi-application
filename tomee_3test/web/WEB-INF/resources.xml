@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<resources>
+    <Resource id="maurodb3" type="javax.sql.DataSource">
+    JdbcDriver org.hsqldb.jdbcDriver
+    JdbcUrl jdbc:hsqldb:file:hsqldb/maurodb3
+    UserName sa
+    Password
+    JtaManaged = true
+</Resource>
+ <Resource id="maurodbUNMANAGED3" type="javax.sql.DataSource">
+    JdbcDriver org.hsqldb.jdbcDriver
+    JdbcUrl jdbc:hsqldb:file:hsqldb/maurodb3
+    UserName sa
+    Password
+    JtaManaged = true
+</Resource>
+</resources>

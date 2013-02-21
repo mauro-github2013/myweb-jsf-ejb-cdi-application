@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:outputText  value="Dati ricavati dal database"></h:outputText>
+       
+        <f:view>
+            <h:form> 
+                <h1><h:outputText value="Elenco operazioni eseguite e salvate sul db"/></h1>
+                <h:dataTable id="tabelladati" title="Tabella operazioni"  value="#{managerSaveOperationEffectued.listAdditionsFromDatabase}" border="1"  bgcolor="blue" width="500" cellpadding="2"  var="item">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Id"/>
+                        </f:facet>
+                        <h:outputText value="#{item.id}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="X"/>
+                        </f:facet>
+                        <h:outputText value="#{item.x}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Y" />
+                        </f:facet>
+                        <h:outputText value="#{item.y}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Total"/>
+                        </f:facet>
+                        <h:outputText value="#{item.total}"/>
+                    </h:column>
+                </h:dataTable>
+                <h:commandLink action="calculator" value="esegui nuova addizione">
+                </h:commandLink>
+            </h:form>
+        </f:view>
+
+
+    </h:body>
+</html>
+
